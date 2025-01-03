@@ -8,3 +8,6 @@ accountList.newAccount("John doe", "johnDoe@email.com", "password", "male", "199
 
 console.log(accountList);
 
+let emailUnique = accountList.emailIsUnique("johnDoe@email.com");
+
+console.log(emailUnique);

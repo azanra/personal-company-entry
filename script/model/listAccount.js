@@ -8,6 +8,13 @@ class ListAccount {
         const createAccount = new Account(inputName, inputEmail, inputPassword, inputGender, inputDob, inputPromotion);
         this.accountList.push(createAccount);
     }
+    emailIsUnique(emailInput) {
+        for(let i = 0; i < this.accountList.length; i++) {
+            if(this.accountList[i].email === emailInput) {
+                return false;
+            }
+        }
+    }
 }
 
 export {ListAccount};
