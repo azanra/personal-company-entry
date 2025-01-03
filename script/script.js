@@ -11,3 +11,7 @@ console.log(accountList);
 let emailUnique = accountList.emailIsUnique("johnDoe@email.com");
 
 console.log(emailUnique);
+
+accountList.changePassword("johnDoe@email.com", "randomPassword");
+
+console.log(accountList);

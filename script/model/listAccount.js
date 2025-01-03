@@ -15,6 +15,13 @@ class ListAccount {
             }
         }
     }
+    changePassword(emailInput, newPassword) {
+        for(let i =0; i < this.accountList.length; i++) {
+            if(this.accountList[i].email === emailInput) {
+                this.accountList[i].password = newPassword;
+            }
+        }
+    }
 }
 
 export {ListAccount};
