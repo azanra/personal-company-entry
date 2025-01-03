@@ -1,5 +1,10 @@
-import { Account } from "./model/account.js";
+import { ListAccount } from "./model/listAccount.js";
 
-let firstAccount = new Account("test", "test", "test", "test", "test", "test");
+let accountList = new ListAccount();
 
-console.log(firstAccount);
+console.log(accountList);
+
+accountList.newAccount("John doe", "johnDoe@email.com", "password", "male", "1999-01-01", "yes");
+
+console.log(accountList);
+
