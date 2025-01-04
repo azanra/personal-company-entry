@@ -1,5 +1,5 @@
 import { ListAccount } from "./model/listAccount.js";
-import { CreateElement } from "./view/element/createElement.js";
+import { RegisterView } from "./view/registerView.js";
 
 let accountList = new ListAccount();
 
@@ -21,8 +21,4 @@ let correctCredential = accountList.credentialIsCorrect("johnDoe@email.com", "ra
 
 console.log(correctCredential);
 
-const eleAttr = {
-    "class" : "emptyDiv"
-}
-
-let newEle = new CreateElement(".root", "div", eleAttr, "hello");
+const registerView = new RegisterView();
