@@ -21,4 +21,8 @@ let correctCredential = accountList.credentialIsCorrect("johnDoe@email.com", "ra
 
 console.log(correctCredential);
 
-let newEle = new CreateElement(".root");
+const eleAttr = {
+    "class" : "emptyDiv"
+}
+
+let newEle = new CreateElement(".root", "div", eleAttr, "hello");
