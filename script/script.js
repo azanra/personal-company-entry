@@ -15,3 +15,7 @@ console.log(emailUnique);
 accountList.changePassword("johnDoe@email.com", "randomPassword");
 
 console.log(accountList);
+
+let correctCredential = accountList.credentialIsCorrect("johnDoe@email.com", "randomPassword");
+
+console.log(correctCredential);
