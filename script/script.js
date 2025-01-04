@@ -1,4 +1,5 @@
 import { ListAccount } from "./model/listAccount.js";
+import { CreateElement } from "./view/element/createElement.js";
 
 let accountList = new ListAccount();
 
@@ -19,3 +20,5 @@ console.log(accountList);
 let correctCredential = accountList.credentialIsCorrect("johnDoe@email.com", "randomPassword");
 
 console.log(correctCredential);
+
+let newEle = new CreateElement(".root");
