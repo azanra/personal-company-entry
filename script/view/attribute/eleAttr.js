@@ -52,6 +52,33 @@ const elementAttribute = {
         "maxlength" : "30",
         "required" : "",
         "placeholder" : "8 to 30 characters"
+    },
+    genderContainer : {
+        "class" : "gender-container"
+    },
+    genderLegend : {
+        "class" : "gender-legend"
+    },
+    maleLabel : {
+        "class" : "male-label",
+        "for" : "male-input"
+    },
+    maleInput : {
+        "type" : "radio",
+        "id" : "male-input",
+        "name" : "gender",
+        "value" : "male",
+        "required" : "",
+    },
+    femaleLabel : {
+        "class" : "female-label",
+        "for" : "female-input"
+    },
+    femaleInput : {
+        "type" : "radio",
+        "id" : "female-input",
+        "name" : "gender",
+        "value" : "female",
     }
 }
 

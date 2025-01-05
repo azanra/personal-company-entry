@@ -3,6 +3,7 @@ import { elementAttribute } from "./attribute/eleAttr.js"
 import { NameInput } from "./formControl/nameInput.js";
 import { EmailInput } from "./formControl/emailInput.js";
 import { PasswordInput } from "./formControl/passwordInput.js";
+import { RadioInput } from "./formControl/radioInput.js";
 
 class RegisterView {
     constructor() {
@@ -10,6 +11,7 @@ class RegisterView {
         const nameEle = new NameInput();
         const emailEle = new EmailInput();
         const passwordEle = new PasswordInput();
+        const radioEle = new RadioInput();
     }
 }
 
