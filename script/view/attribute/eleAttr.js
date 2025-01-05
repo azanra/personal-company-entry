@@ -79,6 +79,20 @@ const elementAttribute = {
         "id" : "female-input",
         "name" : "gender",
         "value" : "female",
+    },
+    promotionContainer : {
+        "class" : "promotion-container"
+    },
+    promotionLabel : {
+        "class" : "promotion-label",
+        "for" : "promotion-input"
+    },
+    promotionInput : {
+        "type" : "checkbox",
+        "id" : "promotion-input",
+        "name" : "receivePromotion",
+        "value" : "yes",
+        "checked" : ""
     }
 }
 
