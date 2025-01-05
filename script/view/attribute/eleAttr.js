@@ -36,6 +36,22 @@ const elementAttribute = {
         "required" : "",
         "placeholder" : "example@company.com",
         "pattern" : ".+@company\.com"
+    },
+    passwordContainer : {
+        "class" : "password-container"
+    },
+    passwordLabel : {
+        "class" : "password-label",
+        "for" : "password-input"
+    },
+    passwordInput : {
+        "type" : "password", 
+        "id" : "password-input",
+        "name" : "password",
+        "minlength" : "8",
+        "maxlength" : "30",
+        "required" : "",
+        "placeholder" : "8 to 30 characters"
     }
 }
 
