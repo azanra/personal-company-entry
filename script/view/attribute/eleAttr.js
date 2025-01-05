@@ -19,6 +19,23 @@ const elementAttribute = {
         "maxlength" : "30",
         "required" : "",
         "placeholder" : "John Doe"
+    },
+    emailContainer : {
+        "class" : "email-container"
+    },
+    emailLabel : {
+        "class" : "email-label",
+        "for" : "email-input"
+    },
+    emailInput : {
+        "type" : "email",
+        "id" : "email-input",
+        "name" : "email",
+        "minlength" : "3",
+        "maxlength" : "30",
+        "required" : "",
+        "placeholder" : "example@company.com",
+        "pattern" : ".+@company\.com"
     }
 }
 
