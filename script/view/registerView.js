@@ -18,6 +18,7 @@ class RegisterView {
         const dateEle = new DateInput();
         const promotionEle = new PromotionInput();
         const registerBtn = new ButtonEle(".register-form", elementAttribute.buttonContainer, ".btn-container", "button", elementAttribute.registerBtn, "Register");
+        const activityEle = new CreateElement(".register-form", "div", elementAttribute.activityText);
     }
 }
 

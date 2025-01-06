@@ -122,6 +122,16 @@ const elementAttribute = {
     loginBtn : {
         "type" : "button",
         "class" : "login-btn"
+    },
+    activityText : {
+        "class" : "activity-text"
+    },
+    changeContainer : {
+        "class" : "change-container"
+    },
+    changePassword : {
+        "class" : "change-password",
+        "href" : ""
     }
 }
 
