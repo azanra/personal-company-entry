@@ -106,6 +106,13 @@ const elementAttribute = {
         "id" : "date-input",
         "name" : "dob",
         "required" : "",
+    },
+    buttonContainer : {
+        "class" : "btn-container"
+    },
+    registerBtn : {
+        "type" : "button",
+        "class" : "register-btn"
     }
 }
 

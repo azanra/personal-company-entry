@@ -6,6 +6,7 @@ import { PasswordInput } from "./formControl/passwordInput.js";
 import { RadioInput } from "./formControl/radioInput.js";
 import { PromotionInput } from "./formControl/promotionInput.js";
 import { DateInput } from "./formControl/dateInput.js";
+import { ButtonEle } from "./formControl/button.js";
 
 class RegisterView {
     constructor() {
@@ -16,6 +17,7 @@ class RegisterView {
         const genderEle = new RadioInput();
         const dateEle = new DateInput();
         const promotionEle = new PromotionInput();
+        const registerBtn = new ButtonEle(".register-form", elementAttribute.buttonContainer, ".btn-container", "button", elementAttribute.registerBtn, "Register");
     }
 }
 
