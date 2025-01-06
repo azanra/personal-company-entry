@@ -10,10 +10,10 @@ import { ButtonEle } from "./formControl/button.js";
 
 class RegisterView {
     constructor() {
-        const formEle = new CreateElement(".root", "form", elementAttribute.formLoginAttr);
+        const formEle = new CreateElement(".root", "form", elementAttribute.formRegister);
         const nameEle = new NameInput();
-        const emailEle = new EmailInput();
-        const passwordEle = new PasswordInput();
+        const emailEle = new EmailInput(".register-form");
+        const passwordEle = new PasswordInput(".register-form");
         const genderEle = new RadioInput();
         const dateEle = new DateInput();
         const promotionEle = new PromotionInput();

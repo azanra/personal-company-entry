@@ -1,5 +1,5 @@
 const elementAttribute = {
-    formLoginAttr : {
+    formRegister : {
         "action" : "",
         "method" : "get",
         "class" : "register-form"
@@ -113,6 +113,15 @@ const elementAttribute = {
     registerBtn : {
         "type" : "button",
         "class" : "register-btn"
+    },
+    formLogin : {
+        "method" : "",
+        "action" : "get",
+        "class" : "login-form"
+    },
+    loginBtn : {
+        "type" : "button",
+        "class" : "login-btn"
     }
 }
 

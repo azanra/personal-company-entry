@@ -1,5 +1,6 @@
 import { ListAccount } from "./model/listAccount.js";
 import { RegisterView } from "./view/registerView.js";
+import { LoginView } from "./view/loginView.js";
 
 let accountList = new ListAccount();
 
@@ -21,4 +22,5 @@ let correctCredential = accountList.credentialIsCorrect("johnDoe@email.com", "ra
 
 console.log(correctCredential);
 
-const registerView = new RegisterView();
+// const registerView = new RegisterView();
+const loginView = new LoginView();
