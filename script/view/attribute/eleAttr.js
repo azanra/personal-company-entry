@@ -93,6 +93,19 @@ const elementAttribute = {
         "name" : "receivePromotion",
         "value" : "yes",
         "checked" : ""
+    },
+    dateContainer : {
+        "class" : "date-container"
+    },
+    dateLabel : {
+        "class" : "date-label",
+        "for" : "date-input"
+    },
+    dateInput : {
+        "type" : "date",
+        "id" : "date-input",
+        "name" : "dob",
+        "required" : "",
     }
 }
 
