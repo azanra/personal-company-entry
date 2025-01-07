@@ -132,6 +132,18 @@ const elementAttribute = {
     changePassword : {
         "class" : "change-password",
         "href" : ""
+    },
+    successContainer : {
+        "class" : "success-container"
+    },
+    headerContainer : {
+        "class" : "header-container"
+    },
+    successText : {
+        "class" : "success-text"
+    },
+    emailText : {
+        "class" : "email-text"
     }
 }
 
