@@ -144,6 +144,13 @@ const elementAttribute = {
     },
     emailText : {
         "class" : "email-text"
+    },
+    nameText : {
+        "class" : "name-text"
+    },
+    logoutBtn : {
+        "type" : "button",
+        "class" : "logout-btn"
     }
 }
 
