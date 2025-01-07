@@ -2,6 +2,7 @@ import { ListAccount } from "./model/listAccount.js";
 import { RegisterView } from "./view/registerView.js";
 import { LoginView } from "./view/loginView.js";
 import { SuccessView } from "./view/successView.js";
+import { ChangePasswordView } from "./view/changePasswordView.js";
 
 let accountList = new ListAccount();
 
@@ -25,4 +26,5 @@ console.log(correctCredential);
 
 // const registerView = new RegisterView();
 // const loginView = new LoginView();
-const successView = new SuccessView();
+// const successView = new SuccessView();
+const changePasswordView = new ChangePasswordView();

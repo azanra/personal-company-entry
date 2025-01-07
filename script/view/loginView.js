@@ -12,7 +12,7 @@ class LoginView {
         const passwordEle = new PasswordInput(".login-form");
         const loginBtn = new ButtonEle(".login-form", elementAttribute.buttonContainer, ".btn-container", "button", elementAttribute.loginBtn, "Login");
         const activityEle = new CreateElement(".login-form", "div", elementAttribute.activityText);
-        const changePasswordEle = new ChangePassword();
+        const changePasswordEle = new ChangePassword(".login-form");
     }
 }
 

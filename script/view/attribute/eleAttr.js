@@ -119,7 +119,7 @@ const elementAttribute = {
         "action" : "get",
         "class" : "login-form"
     },
-    loginBtn : {
+    loginBtn : {    
         "type" : "button",
         "class" : "login-btn"
     },
@@ -151,6 +151,13 @@ const elementAttribute = {
     logoutBtn : {
         "type" : "button",
         "class" : "logout-btn"
+    },
+    changePass : {
+        "class" : "changePass-container"
+    },
+    changePassBtn : {
+        "type" : "button",
+        "class" : "changePass-btn"
     }
 }
 
