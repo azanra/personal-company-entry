@@ -10,4 +10,4 @@ class Util {
     }
 }
 
-export {Util}
+export {Util};

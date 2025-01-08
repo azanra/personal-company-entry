@@ -9,17 +9,33 @@ class RegisterController {
     registerBtnListener(listAccount) {
         const registerBtn = Util.referenceElement(".register-btn");
         registerBtn.addEventListener("click", () => {
-           const emailInput = this.getEmailInput("#email-input");
+           const emailInput = this.getInput("#email-input");
             if(listAccount.emailIsUnique(emailInput) === false) {
-               console.log("working");
+               console.log("Email not unique");
+            } 
+            else {
+                const nameInput = this.getInput("#name-input");
+                const passwordInput = this.getInput("#password-input");
+                const dobInput = this.getInput("#date-input");
+                const genderInput = this.getGenderInput(Util.referenceElement("#male-input"), Util.referenceElement("#female-input"));
+                console.log(genderInput);
             }
         })
     }
-    getEmailInput(element) {
-        const emailInput = Util.referenceElement(element);
-        const emailValue = emailInput.value;
-        return emailValue;
+    getInput(element) {
+        const Input = Util.referenceElement(element);
+        const elementValue = Input.value;
+        return elementValue;
     }
+    getGenderInput(firstRadio, secondRadio) {
+        if(firstRadio.checked) {
+            return firstRadio.value;
+        }
+        if(secondRadio.checked) {
+            return secondRadio.value;
+        }
+    }
+    
 }
 
 export {RegisterController};
