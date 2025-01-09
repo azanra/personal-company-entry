@@ -19,6 +19,8 @@ class RegisterController {
                 const dobInput = this.getInput("#date-input");
                 const genderInput = this.getGenderInput(Util.referenceElement("#male-input"), Util.referenceElement("#female-input"));
                 console.log(genderInput);
+                const promotionValue = this.getPromotionInput(Util.referenceElement("#promotion-input"));
+                console.log(promotionValue);
             }
         })
     }
@@ -33,6 +35,14 @@ class RegisterController {
         }
         if(secondRadio.checked) {
             return secondRadio.value;
+        }
+    }
+    getPromotionInput(element) {
+        if(element.checked) {
+            return element.value;
+        }
+        else {
+            return "no";
         }
     }
     
