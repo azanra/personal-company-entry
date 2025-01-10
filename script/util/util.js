@@ -8,6 +8,13 @@ class Util {
             element.setAttribute(key, attr[key]);
         }
     }
+    static ifElementExist(element) {
+        element.remove();
+    }
+    static removeView() {
+        const registerView = Util.referenceElement(".register-form");
+        Util.ifElementExist(registerView);
+    }
 }
 
 export {Util};

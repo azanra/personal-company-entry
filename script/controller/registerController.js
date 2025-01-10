@@ -26,6 +26,7 @@ class RegisterController {
             const promotionInput = this.getPromotionInput("#promotion-input");
             listAccount.newAccount(nameInput, emailInput, passwordInput, genderInput, dobInput, promotionInput);
             console.log(listAccount);
+            Util.removeView();
         }
     } 
 
@@ -53,15 +54,7 @@ class RegisterController {
         else {
             return "no";
         }
-    }
-    // checkValid(element, event) {
-    //     if(element.checkValidity() === false) {
-    //         const acitivityText = Util.referenceElement(".activity-text");
-    //         acitivityText.textContent = "Please input the correct format";
-    //         event.preventDefault();
-    //     }
-    // }
-    
+    } 
 }
 
 export {RegisterController};
