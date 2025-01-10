@@ -111,7 +111,7 @@ const elementAttribute = {
         "class" : "btn-container"
     },
     registerBtn : {
-        "type" : "button",
+        "type" : "submit",
         "class" : "register-btn"
     },
     formLogin : {
