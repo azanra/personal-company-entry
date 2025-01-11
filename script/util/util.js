@@ -17,10 +17,10 @@ class Util {
         const registerView = Util.referenceElement(".register-form");
         const loginView = Util.referenceElement(".login-form");
         Util.ifElementExist(registerView);
+        Util.ifElementExist(loginView);
     }
     static getInput(element) {
-        const Input = Util.referenceElement(element);
-        
+        const Input = Util.referenceElement(element);     
         const elementValue = Input.value;
         return elementValue;
     }

@@ -1,5 +1,6 @@
 import { Util } from "../util/util.js";
 import { RegisterView } from "../view/registerView.js";
+import { LoginController } from "./loginController.js";
 
 class RegisterController {
     constructor(listAccount) {
@@ -14,28 +15,22 @@ class RegisterController {
         });
     }
     onRegister(listAccount) {
-        const emailInput = this.getInput("#email-input");
+        const emailInput = Util.getInput("#email-input");
         if(listAccount.emailIsUnique(emailInput) === false) {
            console.log("Email not unique");
         } 
         else {
-            const nameInput = this.getInput("#name-input");
-            const passwordInput = this.getInput("#password-input");
-            const dobInput = this.getInput("#date-input");
+            const nameInput = Util.getInput("#name-input");
+            const passwordInput = Util.getInput("#password-input");
+            const dobInput = Util.getInput("#date-input");
             const genderInput = this.getGenderInput("#male-input", "#female-input");
             const promotionInput = this.getPromotionInput("#promotion-input");
             listAccount.newAccount(nameInput, emailInput, passwordInput, genderInput, dobInput, promotionInput);
             console.log(listAccount);
             Util.removeView();
+            const loginController = new LoginController(listAccount);
         }
     } 
-
-    getInput(element) {
-        const Input = Util.referenceElement(element);
-        
-        const elementValue = Input.value;
-        return elementValue;
-    }
     getGenderInput(firstRadio, secondRadio) {
         firstRadio = Util.referenceElement(firstRadio);
         secondRadio = Util.referenceElement(secondRadio);
