@@ -9,11 +9,20 @@ class Util {
         }
     }
     static ifElementExist(element) {
-        element.remove();
+        if(element !== null) {
+            element.remove();
+        }
     }
     static removeView() {
         const registerView = Util.referenceElement(".register-form");
+        const loginView = Util.referenceElement(".login-form");
         Util.ifElementExist(registerView);
+    }
+    static getInput(element) {
+        const Input = Util.referenceElement(element);
+        
+        const elementValue = Input.value;
+        return elementValue;
     }
 }
 
