@@ -25,7 +25,10 @@ class ListAccount {
     credentialIsCorrect(emailInput, passwordInput) {
         for(let i = 0; i < this.accountList.length; i++) {
             if(this.accountList[i].email === emailInput && this.accountList[i].password === passwordInput) {
-                return true;
+                return {
+                    credentialStatus : true,
+                    currentAccount : this.accountList[i]
+                }
             }
         }
     }
