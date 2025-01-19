@@ -7,16 +7,16 @@ class LoginController {
         const loginView = new LoginView();
         const loginForm = Util.referenceElement(".login-form");
         loginForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            this.loginListener(listAccount);
+            Util.stopEvent(event);
+            this.loginListener(listAccount, event);
         })
     }
-    loginListener(listAccount) {
+    loginListener(listAccount, event) {
        const emailValue = Util.getInput("#email-input");
        const passwordValue = Util.getInput("#password-input");
        const values = listAccount.credentialIsCorrect(emailValue, passwordValue);
-       const credentialStatus = this.getStatus(values);
-       const currentAccount = this.getAccount(values);
+       const credentialStatus = this.getStatus(values, event);
+       const currentAccount = this.getAccount(values, event);
        if(credentialStatus === true) {
         Util.removeView();
         const successView = new SuccessView(currentAccount.email, currentAccount.name);
@@ -25,13 +25,17 @@ class LoginController {
         console.log("wrong credential")
        }
     }
-    getStatus(value) {
-        if(value !== false) {
-            return value.credentialStatus;
+    getStatus(value, event) {
+        if(value === undefined) {
+            Util.stopEvent(event);
+        } else {
+           return value.credentialStatus;
         }
     }
-    getAccount(value) {
-        if(value !== null) {
+    getAccount(value, event) {
+        if(value === undefined) {
+            Util.stopEvent(event)
+        } else {
             return value.currentAccount;
         }
     }

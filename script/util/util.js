@@ -24,6 +24,9 @@ class Util {
         const elementValue = Input.value;
         return elementValue;
     }
+    static stopEvent(event) {
+        event.preventDefault();
+    }
 }
 
 export {Util};
