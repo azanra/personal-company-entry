@@ -29,8 +29,6 @@ class ListAccount {
                     credentialStatus : true,
                     currentAccount : this.accountList[i]
                 }
-            }else {
-                return false;
             }
         }
     }
