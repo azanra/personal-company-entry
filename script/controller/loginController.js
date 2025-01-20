@@ -3,6 +3,7 @@ import { ChangePasswordView } from "../view/changePasswordView.js";
 import { ChangePassword } from "../view/formControl/changePassword.js";
 import { LoginView } from "../view/loginView.js";
 import { SuccessView } from "../view/successView.js";
+import { ChangeController } from "./changePassController.js";
 
 class LoginController {
     constructor(listAccount) {
@@ -21,7 +22,7 @@ class LoginController {
         const changeLink = Util.referenceElement(".change-password");
         changeLink.addEventListener("click", (event) => {
             Util.removeView();
-            const changePasswordView = new ChangePasswordView(listAccount);
+            const changeController = new ChangeController(listAccount);
             Util.stopEvent(event);
         })
     }
