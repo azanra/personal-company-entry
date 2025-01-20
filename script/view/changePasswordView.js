@@ -5,7 +5,7 @@ import { EmailInput } from "./formControl/emailInput.js";
 import { PasswordInput } from "./formControl/passwordInput.js";
 
 class ChangePasswordView {
-    constructor() {
+    constructor(listAccount) {
         const changePass = new CreateElement(".root", "div", elementAttribute.changePass);
         const loginBtn = new ButtonEle(".changePass-container", elementAttribute.buttonContainer, ".btn-container", "button", elementAttribute.loginBtn, "Login");
         const emailEle = new EmailInput(".changePass-container");

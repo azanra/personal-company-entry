@@ -16,8 +16,6 @@ class Util {
     static removeView() {
         const registerView = Util.referenceElement(".register-form");
         const loginView = Util.referenceElement(".login-form");
-        const changeView = Util.referenceElement(".change-container");
-        Util.ifElementExist(changeView);
         Util.ifElementExist(registerView);
         Util.ifElementExist(loginView);
     }
