@@ -4,6 +4,7 @@ import { ChangePassword } from "../view/formControl/changePassword.js";
 import { LoginView } from "../view/loginView.js";
 import { SuccessView } from "../view/successView.js";
 import { ChangeController } from "./changePassController.js";
+import { SuccessController } from "./successController.js";
 
 class LoginController {
     constructor(listAccount) {
@@ -34,7 +35,7 @@ class LoginController {
        const currentAccount = this.getAccount(values, event);
        if(credentialStatus === true) {
         Util.removeView();
-        const successView = new SuccessView(currentAccount.email, currentAccount.name);
+        const successController = new SuccessController(currentAccount.email, currentAccount.name, listAccount);
        }
        else {
         console.log("wrong credential")
