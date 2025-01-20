@@ -9,6 +9,6 @@ accountList.newAccount("John doe", "johnDoe@company.com", "password", "male", "1
 
 console.log(accountList);
 
-const registerController = new RegisterController(accountList);
+// const registerController = new RegisterController(accountList);
 
-// const loginController = new LoginController(accountList);
+const loginController = new LoginController(accountList);
