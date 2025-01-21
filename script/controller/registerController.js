@@ -5,6 +5,7 @@ import { LoginController } from "./loginController.js";
 class RegisterController {
     constructor(listAccount) {
         const registerView = new RegisterView();
+        Util.setTextContent("Use company email address");
         this.registerBtnListener(listAccount);
     }
     registerBtnListener(listAccount) {
@@ -18,6 +19,8 @@ class RegisterController {
         const emailInput = Util.getInput("#email-input");
         if(listAccount.emailIsUnique(emailInput) === false) {
            console.log("Email not unique");
+           Util.setTextContent("Email not unique");
+           Util.removeText();
         } 
         else {
             const nameInput = Util.getInput("#name-input");
