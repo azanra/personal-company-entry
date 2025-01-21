@@ -40,9 +40,7 @@ class LoginController {
        else {
         console.log("wrong credential");
         Util.setTextContent("Wrong email / password");
-        setTimeout(() => {
-            Util.setTextContent(" ");
-        }, 1000);
+        Util.removeText();
        }
     }
     getStatus(value, event) {

@@ -15,7 +15,8 @@ class ChangeController {
             const emailInput = Util.getInput("#email-input");
             const passwordInput = Util.getInput("#password-input");
             listAccount.changePassword(emailInput, passwordInput);
-            console.log("success");
+            Util.setTextContent("Change success");
+            Util.removeText();
         })
     }
     loginListener(listAccount) {
@@ -26,6 +27,10 @@ class ChangeController {
             Util.ifElementExist(changeView);
             const loginController = new LoginController(listAccount);
         })
+    }
+    samePassword() {
+        Util.setTextContent("Don't use the same password");
+        Util.removeText();
     }
 }
 

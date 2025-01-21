@@ -33,6 +33,11 @@ class Util {
         const actText = Util.referenceElement(".activity-text");
         actText.textContent = text;
     }
+    static removeText() {
+        setTimeout(() => {
+            Util.setTextContent(" ");
+        }, 1500);
+    }
 }
 
 export {Util};
