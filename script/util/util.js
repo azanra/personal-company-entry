@@ -29,6 +29,10 @@ class Util {
     static stopEvent(event) {
         event.preventDefault();
     }
+    static setTextContent(text) {
+        const actText = Util.referenceElement(".activity-text");
+        actText.textContent = text;
+    }
 }
 
 export {Util};

@@ -38,7 +38,11 @@ class LoginController {
         const successController = new SuccessController(currentAccount.email, currentAccount.name, listAccount);
        }
        else {
-        console.log("wrong credential")
+        console.log("wrong credential");
+        Util.setTextContent("Wrong email / password");
+        setTimeout(() => {
+            Util.setTextContent(" ");
+        }, 1000);
        }
     }
     getStatus(value, event) {
