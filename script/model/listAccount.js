@@ -15,6 +15,15 @@ class ListAccount {
             }
         }
     }
+    passwordUnique(emailInput, passwordInput) {
+        for(let i = 0; i < this.accountList.length ; i++) {
+            if(this.accountList[i].email === emailInput){
+                if(this.accountList[i].password === passwordInput){
+                    return false;
+                }
+            } 
+        }
+    }
     changePassword(emailInput, newPassword) {
         for(let i =0; i < this.accountList.length; i++) {
             if(this.accountList[i].email === emailInput) {

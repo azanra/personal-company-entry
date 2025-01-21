@@ -14,9 +14,13 @@ class ChangeController {
         changeBtn.addEventListener("click" , () => {
             const emailInput = Util.getInput("#email-input");
             const passwordInput = Util.getInput("#password-input");
-            listAccount.changePassword(emailInput, passwordInput);
-            Util.setTextContent("Change success");
-            Util.removeText();
+            if(listAccount.passwordUnique(emailInput, passwordInput) === false) {
+                this.samePassword();
+            }
+            else {
+                listAccount.changePassword(emailInput, passwordInput);
+                this.changeSuccess();
+            }
         })
     }
     loginListener(listAccount) {
@@ -30,6 +34,10 @@ class ChangeController {
     }
     samePassword() {
         Util.setTextContent("Don't use the same password");
+        Util.removeText();
+    }
+    changeSuccess() {
+        Util.setTextContent("Change success");
         Util.removeText();
     }
 }
