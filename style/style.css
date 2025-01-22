@@ -41,11 +41,22 @@ input {
 }
 
 fieldset > input {
-    height: 30px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
+    margin-right: 5%;
 }
 
 input[type="checkbox"] {
     height: 17.5px;
     width: 17.5px;
+}
+
+fieldset {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin-right: 5%;
 }
