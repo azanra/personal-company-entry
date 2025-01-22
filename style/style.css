@@ -29,7 +29,13 @@ div {
     border-radius: 5px;
 }
 
-input, button {
+.register-form {
+    width: 30%;
+    height: auto;
+}
+
+input, button,
+fieldset {
     border-radius: 5px;
     border: 1px solid var(--contract-color);
 }
@@ -59,4 +65,8 @@ fieldset {
 
 label {
     margin-right: 5%;
+}
+
+button {
+    padding: 1% 7%;
 }
