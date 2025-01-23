@@ -11,15 +11,21 @@ class ChangeController {
     }
     changeBtnListener(listAccount) {
         const changeBtn = Util.referenceElement(".changePass-btn");
-        changeBtn.addEventListener("click" , () => {
+        changeBtn.addEventListener("click" , (event) => {
             const emailInput = Util.getInput("#email-input");
             const passwordInput = Util.getInput("#password-input");
-            if(listAccount.passwordUnique(emailInput, passwordInput) === false) {
-                this.samePassword();
+            if(listAccount.emailExist(emailInput) !== true) {
+                console.log("email doesn't exist");
+                Util.stopEvent(event);
             }
-            else {
-                listAccount.changePassword(emailInput, passwordInput);
-                this.changeSuccess();
+            else if(listAccount.emailExist(emailInput) === true) {
+                if(listAccount.passwordUnique(emailInput, passwordInput) === false) {
+                    this.samePassword();
+                }
+                else {
+                    listAccount.changePassword(emailInput, passwordInput);
+                    this.changeSuccess();
+                }
             }
         })
     }

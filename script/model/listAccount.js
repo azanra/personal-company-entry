@@ -42,6 +42,13 @@ class ListAccount {
             }
         }
     }
+    emailExist(emailInput) {
+        for(let i = 0; i < this.accountList.length; i++) {
+            if(this.accountList[i].email === emailInput) {
+                return true;
+            }
+        }
+    }
 }
 
 export {ListAccount};
