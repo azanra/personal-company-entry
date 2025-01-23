@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: #1b1b1b;
     --contract-color: white;
+    --warning-text-color: red;
 }
 
 .root {
@@ -22,17 +23,15 @@ div {
 
 .register-form,
 .login-form,
-.change-container,
-.success-container {
+.success-container,
+.changePass-container {
     border: 1px solid var(--contract-color);
     padding: 3.5%;
     border-radius: 5px;
-}
-
-.register-form {
     width: 30%;
     height: auto;
 }
+
 
 input, button,
 fieldset {
@@ -69,4 +68,16 @@ label {
 
 button {
     padding: 1% 7%;
+}
+
+button:hover {
+    padding: 1.5% 7.5%;
+}
+
+button:active {
+    padding: 2% 8%;
+}
+
+.activity-text {
+    color: var(--warning-text-color);
 }
